@@ -1,0 +1,2 @@
+#!/bin/bash
+gulp & php -S localhost:8888
