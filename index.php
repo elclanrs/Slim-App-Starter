@@ -13,7 +13,7 @@ $view->parserExtensions = [
 ];
 $view->parserOptions = [
   'debug' => true,
-  'cache' => dirname(__FILE__) .'/cache'
+  'cache' => dirname(__FILE__) .'/app/cache'
 ];
 
 $app->get('/', function() use ($app) {
