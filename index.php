@@ -2,9 +2,11 @@
 
 require 'vendor/autoload.php';
 
+define('APP_PATH', dirname(__FILE__) .'/app');
+
 $app = new \Slim\Slim([
   'view' => new \Slim\Views\Twig(),
-  'templates.path' => dirname(__FILE__) .'/app/views'
+  'templates.path' => APP_PATH .'/views'
 ]);
 
 $view = $app->view();
@@ -13,7 +15,7 @@ $view->parserExtensions = [
 ];
 $view->parserOptions = [
   'debug' => true,
-  'cache' => dirname(__FILE__) .'/app/cache'
+  'cache' => APP_PATH .'/cache'
 ];
 
 $app->get('/', function() use ($app) {
