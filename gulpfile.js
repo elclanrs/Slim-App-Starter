@@ -26,8 +26,9 @@ gulp.task('stylus', function() {
   gulp.src('public/src/styl/index.styl')
     .pipe(plumber())
     .pipe(stylus({
-      set: ['compress'],
-      use: [nib()]
+      compress: true,
+      import: 'nib',
+      use: nib()
     }))
     .pipe(gulp.dest('public/lib/css'))
 })
