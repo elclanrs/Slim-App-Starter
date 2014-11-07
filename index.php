@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-define('APP_PATH', dirname(__FILE__) .'/app');
+define('APP_PATH', __DIR__ .'/app');
 
 $app = new \Slim\Slim([
   'view' => new \Slim\Views\Twig(),
